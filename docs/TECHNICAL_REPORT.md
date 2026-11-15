@@ -50,9 +50,9 @@ Run `relief-logistics-hub` (or `relief-logistics-hub.exe` on Windows). The progr
 
 ## 5. Learning notes and limitations
 
-A good review order is `main()`, `ReliefCargo`, `DistributionDepot`, the vehicle hierarchy, and finally persistence and the template queue. The heap-allocated cargo array is small to make copy construction and destruction visible; production code would normally use `std::vector<int>`. The sample does not provide a full dispatch user interface, real maps, fuel models, or agency authentication. A full deployment would require domain validation, stronger persistence and recovery tests, and safety review.
+A good review order is `main()`, `ReliefCargo`, `DistributionDepot`, the vehicle hierarchy, and finally persistence and the template queue. The source uses `using namespace std;` to match the provided beginner-style sample and keep standard-library names short. The heap-allocated cargo array is small to make copy construction and destruction visible; production code would normally use `std::vector<int>`. The sample does not provide a full dispatch user interface, real maps, fuel models, or agency authentication. A full deployment would require domain validation, stronger persistence and recovery tests, and safety review.
 
 ## 6. Verification status
 
-GitHub Actions run [C++17 build and run](https://github.com/samsingh2008/Relief-Logistics-Hub/actions/runs/43738368306) succeeded on `ubuntu-latest`. It compiled `src/main.cpp` with `g++ -std=c++17 -Wall -Wextra -pedantic` and ran the program successfully. The output included both route estimates, the expected overweight-cargo rejection, a dispatched total of 0.2 tonnes, and two saved incident records. The MinGW compiler installed on the development machine could not start because of a Windows DLL relocation error, so verification was completed in GitHub Actions.
+The source was updated to use `using namespace std;` after the previous successful GitHub Actions run. The updated files are being uploaded now; this section will be replaced with the result of the new C++17 build and run.
 
