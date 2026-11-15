@@ -22,7 +22,7 @@ The program writes binary incident records to `incident_log.bin` in its current 
 
 ## Verified run output
 
-The image below shows the successful GitHub Actions run. It compiled the project as C++17 with warnings enabled, ran the example, and printed the route estimates, the rejected overweight dispatch, and the saved incident count.
+The image below shows the successful [GitHub Actions build and run](https://github.com/samsingh2008/Relief-Logistics-Hub/actions/runs/43740627384) for the current source. It compiled the project as C++17 with warnings enabled and printed the route estimates, rejected overweight dispatch, and saved incident count.
 
 ![C++17 build and run output](docs/github-actions-terminal-output.png)
 
