@@ -54,6 +54,5 @@ A good review order is `main()`, `ReliefCargo`, `DistributionDepot`, the vehicle
 
 ## 6. Verification status
 
-The source is written for C++17. A local build was attempted with MinGW using `-Wall -Wextra -pedantic`, but the installed compiler fails to start with a Windows DLL relocation error. An online Compiler Explorer compile-and-run request was also attempted, but no result returned before timeout. Therefore compilation and runtime verification remain pending. Run the build command in the README on a working C++17 setup before submission.
-
+GitHub Actions run [C++17 build and run](https://github.com/samsingh2008/Relief-Logistics-Hub/actions/runs/43738368306) succeeded on `ubuntu-latest`. It compiled `src/main.cpp` with `g++ -std=c++17 -Wall -Wextra -pedantic` and ran the program successfully. The output included both route estimates, the expected overweight-cargo rejection, a dispatched total of 0.2 tonnes, and two saved incident records. The MinGW compiler installed on the development machine could not start because of a Windows DLL relocation error, so verification was completed in GitHub Actions.
 
