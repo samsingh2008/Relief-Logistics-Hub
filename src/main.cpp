@@ -34,7 +34,7 @@ public:
     ReliefCargo& operator=(ReliefCargo other) { swap(other); return *this; }
     ~ReliefCargo() { delete[] quantities_; }
     void swap(ReliefCargo& other) noexcept {
-        swap(name_, other.name_); swap(quantities_, other.quantities_); swap(size_, other.size_);
+        std::swap(name_, other.name_); std::swap(quantities_, other.quantities_); std::swap(size_, other.size_);
     }
     const string& name() const { return name_; }
     size_t size() const { return size_; }
