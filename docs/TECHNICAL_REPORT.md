@@ -54,5 +54,5 @@ A good review order is `main()`, `ReliefCargo`, `DistributionDepot`, the vehicle
 
 ## 6. Verification status
 
-The source was updated to use `using namespace std;` after the previous successful GitHub Actions run. The updated files are being uploaded now; this section will be replaced with the result of the new C++17 build and run.
+GitHub Actions run [C++17 build and run](https://github.com/samsingh2008/Relief-Logistics-Hub/actions/runs/43740627384) succeeded on `ubuntu-latest` after the style update. It compiled `src/main.cpp` with `g++ -std=c++17 -Wall -Wextra -pedantic` and ran the program successfully. The output included both route estimates, the expected overweight-cargo rejection, a dispatched total of 0.2 tonnes, and two saved incident records. MinGW on the development machine could not start because of a Windows DLL relocation error, so the verified run was performed in GitHub Actions.
 
