@@ -1,0 +1,17 @@
+name: C++17 build and run
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Compile with warnings
+        run: g++ -std=c++17 -Wall -Wextra -pedantic src/main.cpp -o relief-logistics-hub
+      - name: Run example
+        run: ./relief-logistics-hub
+
