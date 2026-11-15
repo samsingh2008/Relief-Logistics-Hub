@@ -37,9 +37,9 @@ The image below shows the successful GitHub Actions run. It compiled the project
 
 The example uses simple illustrative route multipliers and sample quantities. They are not operational disaster-response advice.
 
-## Why the source writes `std::` explicitly
+## Code style
 
-The source uses names such as `std::cout`, `std::vector`, and `std::string` so it is clear that they come from the C++ standard library. This also avoids importing every name from `std` into the global namespace, where names could collide with project code. For a short example, `using namespace std;` can work, but explicit prefixes make the source easier to follow as it grows.
+The source follows the style in the provided sample and uses `using namespace std;`, so standard-library names such as `cout`, `vector`, and `string` appear without the `std::` prefix. This keeps the beginner example visually shorter. In larger projects, explicit `std::` prefixes can make it easier to see which names come from the standard library.
 
 ## Assignment mapping
 
